@@ -11,6 +11,7 @@ const Logo = () => {
         width={50}
         height={50}
         alt='light theme logo image'
+        priority
       />
     )
   }
@@ -21,6 +22,7 @@ const Logo = () => {
       width={50}
       height={50}
       alt='dark theme logo image'
+      priority
     />
   )
 }

@@ -3,8 +3,8 @@
 import { PropsWithChildren } from 'react'
 import { ThemeProvider } from 'next-themes'
 
-const Providers: React.FC<PropsWithChildren> = ({ children }) => {
+const ThemeStoreProvider: React.FC<PropsWithChildren> = ({ children }) => {
   return <ThemeProvider attribute='class'>{children}</ThemeProvider>
 }
 
-export default Providers
+export default ThemeStoreProvider

@@ -1,12 +1,8 @@
 import Header from '@/app/ui/layout/header'
 import Footer from '@/app/ui/layout/footer'
-import ThemeContextProvider from '@/app/context/providers'
+import { PropsWithChildren } from 'react'
 
-type LayoutProps = {
-  children: React.ReactNode
-}
-
-const Layout = ({ children }: LayoutProps) => {
+const Layout: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <>
       <Header />

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { useTheme } from 'next-themes'
 
-const Logo = () => {
+const Logo: React.FC = () => {
   const { theme } = useTheme()
 
   if (theme === 'light') {

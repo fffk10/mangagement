@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useLayoutEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 import { FaRegMoon } from 'react-icons/fa6'
 import { WiDaySunny } from 'react-icons/wi'
@@ -10,7 +10,7 @@ const ThemeToggle: React.FC = () => {
     setTheme(theme === 'light' ? 'dark' : 'light')
   }
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setMounted(true)
   }, [])
 
@@ -27,7 +27,12 @@ const ThemeToggle: React.FC = () => {
           className='sr-only peer'
           onChange={changeHandler}
         />
-        <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600" />
+        <span
+          className='block w-[2.5em] cursor-pointer bg-gray-500 rounded-full 
+      p-[1px] after:block after:h-[1.25em] after:w-[1.25em] after:rounded-full 
+      after:bg-white after:transition peer-checked:bg-blue-500 
+      peer-checked:after:translate-x-[calc(100%-2px)] ml-4'
+        ></span>
 
         <span className='ms-3 text-sm font-medium'>
           {theme === 'dark' ? <FaRegMoon /> : <WiDaySunny />}

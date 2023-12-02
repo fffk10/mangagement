@@ -1,16 +1,16 @@
 import Image from 'next/image'
 import { useTheme } from 'next-themes'
 
-const Logo: React.FC = () => {
+const Logo = (): JSX.Element => {
   const { theme } = useTheme()
 
-  if (theme === 'light') {
+  if (theme === 'dark') {
     return (
       <Image
-        src='/logo-light.png'
+        src='/logo-dark.png'
         width={50}
         height={50}
-        alt='light theme logo image'
+        alt='dark theme logo image'
         priority
       />
     )
@@ -18,10 +18,10 @@ const Logo: React.FC = () => {
 
   return (
     <Image
-      src='/logo-dark.png'
+      src='/logo-light.png'
       width={50}
       height={50}
-      alt='dark theme logo image'
+      alt='light theme logo image'
       priority
     />
   )

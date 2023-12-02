@@ -1,6 +1,6 @@
 import { signIn } from 'next-auth/react'
 
-const LoginButton: React.FC = () => {
+const LoginButton = (): JSX.Element => {
   return (
     <button
       type='button'

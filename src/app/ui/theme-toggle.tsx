@@ -3,7 +3,7 @@ import { useTheme } from 'next-themes'
 import { FaRegMoon } from 'react-icons/fa6'
 import { WiDaySunny } from 'react-icons/wi'
 
-const ThemeToggle: React.FC = () => {
+const ThemeToggle = (): JSX.Element | null => {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
   const changeHandler = (): void => {

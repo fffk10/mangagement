@@ -1,16 +1,16 @@
 import type { Metadata } from 'next'
 import '@/app/ui/globals.css'
+import { PropsWithChildren } from 'react'
 import { inter } from '@/app/ui/fonts'
 import ThemeStoreProvider from '@/app/providers/theme-providers'
 import NextAuthProvider from '@/app/providers/next-auth'
-import { PropsWithChildren } from 'react'
 
 export const metadata: Metadata = {
   title: 'Mangagement',
   description: 'Manga mangement web app by create next app',
 }
 
-const RootLayout: React.FC<PropsWithChildren> = ({ children }) => {
+const RootLayout = ({ children }: PropsWithChildren): JSX.Element => {
   return (
     <html lang='en' suppressHydrationWarning>
       <body

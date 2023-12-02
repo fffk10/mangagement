@@ -3,7 +3,7 @@
 import { SessionProvider } from 'next-auth/react'
 import { PropsWithChildren } from 'react'
 
-const NextAuthProvider: React.FC<PropsWithChildren> = ({ children }) => {
+const NextAuthProvider = ({ children }: PropsWithChildren): JSX.Element => {
   return <SessionProvider>{children}</SessionProvider>
 }
 

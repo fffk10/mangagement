@@ -5,7 +5,7 @@ type ToggleProps = {
   text?: string
 }
 
-const Toggle: React.FC<ToggleProps> = ({ click, text }) => {
+const Toggle = ({ click, text }: ToggleProps): JSX.Element => {
   return (
     <label className='relative inline-flex items-center cursor-pointer'>
       <input type='checkbox' className='sr-only peer' onClick={click} />

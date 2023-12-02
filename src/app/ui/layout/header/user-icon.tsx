@@ -1,7 +1,7 @@
 import { useSession } from 'next-auth/react'
 import Image from 'next/image'
 
-const UserIcon: React.FC = () => {
+const UserIcon = (): JSX.Element => {
   const { data: session } = useSession()
 
   return (

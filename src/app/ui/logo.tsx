@@ -1,8 +1,20 @@
 import Image from 'next/image'
 import { useTheme } from 'next-themes'
+import { useLayoutEffect, useState } from 'react'
+import { LogoSkelton } from '@/app/ui/skeltons'
 
-const Logo = (): JSX.Element => {
+const Logo = (): JSX.Element | null => {
+  const [mounted, setMounted] = useState(false)
   const { theme } = useTheme()
+
+  useLayoutEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    // return <LogoSkelton />
+    return null
+  }
 
   if (theme === 'dark') {
     return (

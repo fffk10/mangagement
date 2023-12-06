@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import { useTheme } from 'next-themes'
 import { useLayoutEffect, useState } from 'react'
-import { LogoSkelton } from '@/app/ui/skeltons'
 
 const Logo = (): JSX.Element | null => {
   const [mounted, setMounted] = useState(false)
@@ -12,16 +11,16 @@ const Logo = (): JSX.Element | null => {
   }, [])
 
   if (!mounted) {
-    // return <LogoSkelton />
-    return null
+    // skelton
+    return <div className='h-12 w-12'></div>
   }
 
   if (theme === 'dark') {
     return (
       <Image
         src='/logo-dark.png'
-        width={50}
-        height={50}
+        width={48}
+        height={48}
         alt='dark theme logo image'
         priority
       />

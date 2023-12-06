@@ -2,6 +2,7 @@
 
 import { open_suns, rubik } from '@/app/ui/fonts'
 import Logo from '@/app/ui/logo'
+import clsx from 'clsx'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
@@ -18,16 +19,7 @@ const MAIN_MENU_LIST: Menu[] = [
 ]
 
 const SideNav = (): JSX.Element | null => {
-  const [mounted, setMounted] = useState(false)
   const pathname = usePathname()
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) {
-    return null
-  }
 
   return (
     <div
@@ -54,10 +46,13 @@ const SideNav = (): JSX.Element | null => {
               <li key={menu.title} className='my-2'>
                 <Link
                   href={`/${menu.title.toLocaleLowerCase()}`}
-                  className={`${
-                    pathname === `/${menu.title.toLocaleLowerCase()}` &&
-                    'bg-gray-200'
-                  } flex items-center rounded-lg px-4 py-2 hover:bg-gray-200 active:bg-gray-200`}
+                  className={clsx(
+                    'flex items-center rounded-lg px-4 py-2 hover:bg-gray-200 active:bg-gray-200',
+                    {
+                      'bg-gray-200':
+                        pathname === `/${menu.title.toLocaleLowerCase()}`,
+                    }
+                  )}
                 >
                   {menu.icon}
                   <p className='mx-2'>{menu.title}</p>

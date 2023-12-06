@@ -1,15 +1,7 @@
+import Card from '@/app/ui/common/card'
+
 const Page = (): JSX.Element => {
-  return (
-    <div>
-      <div>hogehoge</div>
-      <div>hoge</div>
-      <div>hoge</div>
-      <div>hoge</div>
-      <div>hoge</div>
-      <div>hoge</div>
-      <div>hoge</div>
-    </div>
-  )
+  return <Card title='最近の更新履歴' />
 }
 
 export default Page

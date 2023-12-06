@@ -27,7 +27,7 @@ const RootLayout = ({ children }: PropsWithChildren): JSX.Element => {
               </div>
               <div className='flex-grow p-6 md:overflow-y-auto md:p-0'>
                 <Header />
-                {children}
+                <div className='px-6 py-4'>{children}</div>
                 <Footer />
               </div>
             </div>

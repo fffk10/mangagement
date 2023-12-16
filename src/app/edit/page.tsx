@@ -1,8 +1,4 @@
-import React from 'react'
-
-type Props = {}
-
-const Edit = (props: Props) => {
+const Edit = () => {
   return <div>Edit</div>
 }
 

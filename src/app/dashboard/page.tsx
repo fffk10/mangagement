@@ -1,7 +1,13 @@
-import Card from '@/app/ui/common/card'
+import PageTitle from '@/app/ui/common/page-title'
+import CardWrapper from '@/app/ui/dashboard/card-wrapper'
 
-const Page = (): JSX.Element => {
-  return <Card title='最近の更新履歴' />
+const DashboardPage = (): JSX.Element => {
+  return (
+    <>
+      <PageTitle text='Dashboard' />
+      <CardWrapper />
+    </>
+  )
 }
 
-export default Page
+export default DashboardPage

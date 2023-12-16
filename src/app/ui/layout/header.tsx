@@ -9,7 +9,7 @@ import UserIcon from '@/app/ui/layout/header/user-icon'
 const Header = (): JSX.Element | null => {
   const { status } = useSession()
   return (
-    <header className='shadow-lg p-2 justify-end hidden md:flex'>
+    <header className='shadow-lg p-2 justify-end hidden md:flex h-14'>
       <nav className='my-auto mx-4 flex justify-between'>
         {status === 'authenticated' ? (
           <>

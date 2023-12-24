@@ -16,7 +16,7 @@ type Menu = {
 
 const MAIN_MENU_LIST: Menu[] = [
   { icon: <FaHome />, title: 'Dashboard' },
-  { icon: <FaBook />, title: 'Bookshelf' },
+  { icon: <FaBook />, title: 'Comicshelf' },
   { icon: <FaEdit />, title: 'Edit' },
 ]
 

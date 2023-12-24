@@ -1,12 +1,12 @@
-export type Book = {
+export type Comic = {
   id: number
   title: string
   author: string
-  detail: BookDetail
+  detail: ComicDetail
   insertDate: string
   updateDate: string
 }
 
-export type BookDetail = {
+export type ComicDetail = {
   [K: string]: string | number
 }
